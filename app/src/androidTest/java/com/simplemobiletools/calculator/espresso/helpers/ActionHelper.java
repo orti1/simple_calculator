@@ -41,28 +41,11 @@ public class ActionHelper {
     }
 
     /** Verify if element is present.
-     *  @param desired button text to match element
+     *  @param elementText button text to match element
      */
-    public static void verifyElementPresent(String desired) {
-        onView(allOf(isAssignableFrom(Button.class), withText(desired)))
+    public static void verifyElementPresent(String elementText) {
+        onView(allOf(isAssignableFrom(Button.class), withText(elementText)))
                 .check(matches(isDisplayed()));
-    }
-
-    /** Verify if element is present.
-     *  @param id element locator
-     */
-    public static void verifyElementDisplayed(int id) {
-        onView(withId(id))
-                .check(matches(isDisplayed()));
-    }
-
-    /** Verify if element include specific text.
-     *  @param id element locator
-     *  @param desired text to be matched
-     */
-    public static void verifyText(int id, String desired) {
-        onView(withId(id))
-                .check(matches(withText(desired)));
     }
 
     /** Verify if toggle button is on.

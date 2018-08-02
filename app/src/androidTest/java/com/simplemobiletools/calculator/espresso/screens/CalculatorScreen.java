@@ -26,11 +26,6 @@ public class CalculatorScreen {
         return this;
     }
 
-    public CalculatorScreen pressNumber(int number){
-        ActionHelper.press(String.valueOf(number));
-        return this;
-    }
-
     public CalculatorScreen pressOperation(String operator){
         ActionHelper.press(operator);
         return this;

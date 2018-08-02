@@ -1,7 +1,6 @@
 package com.simplemobiletools.calculator.espresso;
 
 import android.support.test.runner.AndroidJUnit4;
-
 import com.simplemobiletools.calculator.espresso.screens.SettingsScreen;
 import org.junit.Test;
 import org.junit.runner.RunWith;
