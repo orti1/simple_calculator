@@ -24,44 +24,57 @@ import static org.hamcrest.CoreMatchers.isA;
 
 public class ActionHelper {
 
-    /** Asserts if result screen contains desired string. */
+    /** Asserts if result screen contains desired string.
+     *  @param desired text to be matched
+     */
     public static void checkResult(String desired) {
         onView(withId(R.id.result))
                 .check(matches(withText(desired)));
     }
 
-    /** Asserts if formula screen contains desired string. */
+    /** Asserts if formula screen contains desired string.
+     *  @param desired text to be matched
+     */
     public static void checkFormula(String desired) {
         onView(withId(R.id.formula))
                 .check(matches(withText(desired)));
     }
 
-    /** Verify if element is present. */
+    /** Verify if element is present.
+     *  @param desired button text to match element
+     */
     public static void verifyElementPresent(String desired) {
         onView(allOf(isAssignableFrom(Button.class), withText(desired)))
                 .check(matches(isDisplayed()));
     }
 
-    /** Verify if element is present. */
+    /** Verify if element is present.
+     *  @param id element locator
+     */
     public static void verifyElementDisplayed(int id) {
         onView(withId(id))
                 .check(matches(isDisplayed()));
     }
 
-    /** Verify if element include specific text. */
+    /** Verify if element include specific text.
+     *  @param id element locator
+     *  @param desired text to be matched
+     */
     public static void verifyText(int id, String desired) {
         onView(withId(id))
                 .check(matches(withText(desired)));
     }
 
-    /** Verify if toggle button is on. */
+    /** Verify if toggle button is on.
+     *  @param id element locator
+     */
     public static void verifyToggleOn(int id) {
         onView(withId(id))
                 .check(matches(isChecked()));
     }
 
     /** Press button
-     *  @param button {@link String} with the button locator
+     *  @param button button text to match element
      */
     public static void press(String button) {
         onView(withText(button))
@@ -69,7 +82,7 @@ public class ActionHelper {
     }
 
     /** Press digit
-     *  @param id {@link int} with the button locator
+     *  @param id element locator
      */
     public static void press(int id) {
         onView(withId(id))
@@ -77,7 +90,7 @@ public class ActionHelper {
     }
 
     /** Long press button
-     *  @param button {@link String} with the button locator
+     *  @param button button text to match element
      */
     public static void longPress(String button) {
         onView(withText(button))
@@ -85,6 +98,7 @@ public class ActionHelper {
     }
 
     /** Turn toggle button on
+     *  @param checked desired checked state
      */
     public static ViewAction setChecked(final boolean checked) {
         return new ViewAction() {
@@ -117,7 +131,8 @@ public class ActionHelper {
         };
     }
 
-    /** Set toggle to ON state
+    /** Set toggle to checked state
+     *  @param id element locator
      */
     public static void setToggleOn(int id) {
         onView(withId(id))
