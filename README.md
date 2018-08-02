@@ -1,0 +1,1 @@
+This is a short test framework made for simple calculator app.

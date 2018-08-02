@@ -29,7 +29,7 @@ public class InitialStateTests {
     }
 
     @Test
-    public void toStartApp_NumberButtonsShouldBeDisplayed(){
+    public void start_NumberButtonsShouldBeDisplayed(){
         CalculatorScreen calculatorScreen = new CalculatorScreen();
 
         calculatorScreen
@@ -41,7 +41,7 @@ public class InitialStateTests {
     }
 
     @Test
-    public void toStartApp_OperationsButtonsShouldBeDisplayed(){
+    public void start_OperationsButtonsShouldBeDisplayed(){
         CalculatorScreen calculatorScreen = new CalculatorScreen();
 
         calculatorScreen
@@ -56,7 +56,7 @@ public class InitialStateTests {
     }
 
     @Test
-    public void toStartApp_ClearButtonShouldBeDisplayed(){
+    public void start_ClearButtonShouldBeDisplayed(){
         CalculatorScreen calculatorScreen = new CalculatorScreen();
 
         calculatorScreen
@@ -65,7 +65,7 @@ public class InitialStateTests {
     }
 
     @Test
-    public void ToStartApp_DotButtonShouldBeDisplayed(){
+    public void start_DotButtonShouldBeDisplayed(){
         CalculatorScreen calculatorScreen = new CalculatorScreen();
 
         calculatorScreen
@@ -74,7 +74,7 @@ public class InitialStateTests {
     }
 
     @Test
-    public void ToStartApp_EqualButtonShouldBeDisplayed(){
+    public void start_EqualButtonShouldBeDisplayed(){
         CalculatorScreen calculatorScreen = new CalculatorScreen();
 
         calculatorScreen

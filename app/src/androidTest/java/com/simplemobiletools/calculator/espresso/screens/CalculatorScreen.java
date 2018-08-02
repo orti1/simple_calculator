@@ -1,18 +1,10 @@
 package com.simplemobiletools.calculator.espresso.screens;
 
-
 import android.support.test.rule.ActivityTestRule;
-import android.widget.Button;
-
 import com.simplemobiletools.calculator.activities.MainActivity;
 import com.simplemobiletools.calculator.R;
 import com.simplemobiletools.calculator.espresso.helpers.ActionHelper;
 import org.junit.Rule;
-
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.*;
-import static org.hamcrest.CoreMatchers.allOf;
 
 public class CalculatorScreen {
 
@@ -21,7 +13,6 @@ public class CalculatorScreen {
 
     public CalculatorScreen start(){
         mainActivityRule.launchActivity(null);
-
         return this;
     }
 
@@ -51,23 +42,17 @@ public class CalculatorScreen {
     }
 
     public CalculatorScreen verifyButtonIsDisplayed(String text){
-        onView(allOf(isAssignableFrom(Button.class), withText(text)))
-                .check(matches(isDisplayed()));
-
+        ActionHelper.verifyElementPresent(text);
         return this;
     }
 
     public CalculatorScreen verifyFormulaScreen(String text){
-        onView(withId(R.id.formula))
-                .check(matches(withText(text)));
-
+        ActionHelper.checkFormula(text);
         return this;
     }
 
     public CalculatorScreen verifyResultScreen(String text){
-        onView(withId(R.id.result))
-                .check(matches(withText(text)));
-
+        ActionHelper.checkResult(text);
         return this;
     }
 }
