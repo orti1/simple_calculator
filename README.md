@@ -1,1 +1,3 @@
-This is a short test framework made for simple calculator app.
+# Simple calculator - UI tests sample
+
+This is a short test automation framework for UI tests of simple calculator app.
